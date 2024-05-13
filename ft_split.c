@@ -76,18 +76,18 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-int main()
-{
-    int i;
+//int main()
+//{
+//    int i;
 
-    i = 0;
-    char **res;
+//    i = 0;
+//    char **res;
 
-    res = ft_split("lorem ipsum dolor sit amet", 'i');
-    while(res[i])
-    {
-       printf("%s\n", res[i]);
-       i++;
-    }
-    return(0);
-}
+//    res = ft_split("lorem ipsum dolor sit amet", 'i');
+//    while(res[i])
+//    {
+//       printf("%s\n", res[i]);
+//       i++;
+//    }
+//    return(0);
+//}
