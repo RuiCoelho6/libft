@@ -16,23 +16,23 @@ static int	word_count(const char *str, char c)
 {
 	int	i;
 	int	flag;
-	int	n_letters;
+	int	n_words;
 
 	i = 0;
 	flag = 0;
-	n_letters = 0;
+	n_words = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] != c && flag == 0)
 		{
 			flag = 1;
-			n_letters++;
+			n_words++;
 		}
 		else if (str[i] == c)
 			flag = 0;
 		i++;
 	}
-	return (n_letters);
+	return (n_words);
 }
 
 static char	*str_length(const char *str, int start, int end)
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**res;
 
-	res = ft_calloc((char_count(s, c) + 1), sizeof(char *));
+	res = ft_calloc((word_count(s, c) + 1), sizeof(char *));
 	if (!s || !(res))
 		return (NULL);
 	i = 0;
