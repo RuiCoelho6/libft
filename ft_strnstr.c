@@ -6,7 +6,7 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 09:49:04 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/08 15:32:17 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/10 17:43:19 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big_str[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (big_str[i + j] != '\0' && little[j] != '\0' && big_str[i + j] == little[j] && i + j < len)
+		while (big_str[i + j] != '\0' && little[j] != '\0' && big_str[i
+				+ j] == little[j] && i + j < len)
 			j++;
 		if (j == len_little)
 			return (big_str + i);

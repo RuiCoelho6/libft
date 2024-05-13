@@ -6,7 +6,7 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:39:32 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/08 16:40:36 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/10 17:28:43 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst == NULL || new == NULL)
-		return;
+		return ;
 	new -> next = *lst;
 	*lst = new;
 }

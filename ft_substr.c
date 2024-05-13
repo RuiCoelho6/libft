@@ -6,16 +6,16 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:57:37 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/08 12:42:51 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:41:04 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *result(const char *s, char *sub, unsigned int start, size_t len)
+static char	*result(const char *s, char *sub, unsigned int start, size_t len)
 {
 	unsigned int	i;
-	size_t	j;
+	size_t			j;
 
 	i = 0;
 	j = 0;
@@ -43,7 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	else if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
-	if (!(sub = malloc((len + 1) * sizeof(char))))
+	sub = malloc((len + 1) * sizeof(char));
+	if (!(sub))
 		return (NULL);
 	return (result(s, sub, start, len));
 }

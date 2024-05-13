@@ -6,7 +6,7 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:44:08 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/03 03:43:44 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:44:47 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**res;
 
-	if (!s || !(res = ft_calloc((char_count(s, c) + 1), sizeof(char *))))
+	res = ft_calloc((char_count(s, c) + 1), sizeof(char *));
+	if (!s || !(res))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -83,10 +84,10 @@ char	**ft_split(char const *s, char c)
 //     char **res;
 
 //     res = ft_split("lorem ipsum dolor sit amet,
-	//     while(res[i])
-	//     {
-	//        printf("%s\n", res[i]);
-	//        i++;
-	//     }
-	//     return(0);
-	// }
+//     while(res[i])
+//     {
+//        printf("%s\n", res[i]);
+//        i++;
+//     }
+//     return(0);
+// }

@@ -6,7 +6,7 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:09:26 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/07 13:46:32 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/10 16:13:09 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
-	if (!(str = malloc((ft_strlen(s) + 1) * sizeof(char))))
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!(str))
 		return (NULL);
 	i = 0;
 	while (i < ft_strlen(s))
