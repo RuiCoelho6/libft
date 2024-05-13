@@ -6,13 +6,13 @@
 /*   By: rpires-c <rpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:44:08 by rpires-c          #+#    #+#             */
-/*   Updated: 2024/05/10 15:44:47 by rpires-c         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:17:22 by rpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	char_count(const char *str, char c)
+static int	word_count(const char *str, char c)
 {
 	int	i;
 	int	flag;
@@ -72,22 +72,22 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	res[j] = 0;
+	res[j] = '\0';
 	return (res);
 }
 
-// int main()
-// {
-//     int i;
+int main()
+{
+    int i;
 
-//     i = 0;
-//     char **res;
+    i = 0;
+    char **res;
 
-//     res = ft_split("lorem ipsum dolor sit amet,
-//     while(res[i])
-//     {
-//        printf("%s\n", res[i]);
-//        i++;
-//     }
-//     return(0);
-// }
+    res = ft_split("lorem ipsum dolor sit amet", 'i');
+    while(res[i])
+    {
+       printf("%s\n", res[i]);
+       i++;
+    }
+    return(0);
+}
