@@ -43,4 +43,4 @@ exec:
 	cc -g $(FLGS) $(SOURCES) $(SOURCES_BONUS) -lbsd
 
 norm: 
-	python3 -m c_formatter_42 -c $(SOURCES)
+	yes y | python3 -m c_formatter_42 -c $(SOURCES)
