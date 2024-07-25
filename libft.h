@@ -12,7 +12,6 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <bsd/string.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <stdio.h>
