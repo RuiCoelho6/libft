@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	res[j] = '\0';
+	res[j] = 0;
 	return (res);
 }
 
